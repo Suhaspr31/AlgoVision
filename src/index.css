@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-dark dark:text-gray-100 transition-colors duration-300;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-slate-500;
+}
+
+/* Custom Button Styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-indigo-600 shadow-lg shadow-indigo-500/30;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 dark:bg-slate-700 hover:bg-gray-300 dark:hover:bg-slate-600;
+}
+
+.btn-icon {
+  @apply p-2 rounded-lg bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors;
+}
+
+/* Animation Classes */
+.animate-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700;
+}
+
+/* Input Styles */
+input[type="number"],
+input[type="text"] {
+  @apply bg-gray-100 dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+}
+
+/* Range Input */
+input[type="range"] {
+  @apply h-2 bg-gray-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-primary rounded-full cursor-pointer transition-transform hover:scale-110;
+}
+
+/* Select Dropdown */
+select {
+  @apply bg-gray-100 dark:bg-slate-700 text-sm p-2 rounded-lg border-none outline-none focus:ring-2 focus:ring-primary cursor-pointer;
+}
+
+/* Node styles for graph visualization */
+.node {
+  @apply rounded-full flex items-center justify-center font-bold transition-all duration-300;
+}
+
+.edge {
+  @apply stroke-2 transition-all duration-300;
+}
+
+/* Bar chart animation */
+.bar-container {
+  @apply flex items-end justify-center gap-1 w-full h-full;
+}
+
+.bar {
+  @apply rounded-t-md transition-all duration-300 ease-out;
+}
+
+/* Pseudocode panel */
+.code-block {
+  @apply bg-slate-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto;
+}
+
+.code-line {
+  @apply px-2 py-1 rounded transition-colors duration-200;
+}
+
+.code-line.active {
+  @apply bg-yellow-500/30 text-yellow-300;
+}
+
+/* Highlight effects */
+.highlight-compare {
+  @apply bg-yellow-500;
+}
+
+.highlight-swap {
+  @apply bg-red-500;
+}
+
+.highlight-sorted {
+  @apply bg-green-500;
+}
+
+.highlight-current {
+  @apply bg-blue-500;
+}
+
+.highlight-visited {
+  @apply bg-purple-500;
+}
