@@ -38,6 +38,10 @@
 | Breadth First Search (BFS) | O(V + E)        | O(V)             |
 | Depth First Search (DFS)   | O(V + E)        | O(V)             |
 | Dijkstra's Algorithm       | O(E log V)      | O(V)             |
+| Bellman-Ford Algorithm     | O(VE)           | O(V)             |
+| Floyd-Warshall Algorithm   | O(V³)           | O(V²)            |
+| Prim's Algorithm           | O(E log V)      | O(V)             |
+| Kruskal's Algorithm        | O(E log E)      | O(V)             |
 
 ### Interactive Features
 
@@ -137,32 +141,32 @@ The core innovation of AlgoVision is the **Trace/Snapshot Pattern**:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    ALGORITHM EXECUTION                           │
+│                    ALGORITHM EXECUTION                          │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│   Algorithm Function                                             │
-│        │                                                       │
-│        │  Run instantly, generate all steps                    │
-│        ▼                                                       │
-│   ┌─────────────┐                                              │
-│   │ Trace Array │  Each element is a "snapshot"               │
-│   │─────────────│  containing complete state                  │
-│   │ Step 0      │  - Array/Graph state                         │
-│   │ Step 1      │  - Comparison indices                        │
-│   │ Step 2      │  - Swap operations                           │
-│   │ ...         │  - Current line of pseudocode               │
-│   │ Step N      │  - Description text                          │
-│   └─────────────┘                                              │
-│                                                                  │
+│                                                                 │
+│   Algorithm Function                                            │
+│        │                                                        │
+│        │  Run instantly, generate all steps                     │
+│        ▼                                                        │
+│   ┌─────────────┐                                               │
+│   │ Trace Array │  Each element is a "snapshot"                 │
+│   │─────────────│  containing complete state                    │
+│   │ Step 0      │  - Array/Graph state                          │
+│   │ Step 1      │  - Comparison indices                         │
+│   │ Step 2      │  - Swap operations                            │
+│   │ ...         │  - Current line of pseudocode                 │
+│   │ Step N      │  - Description text                           │
+│   └─────────────┘                                               │
+│                                                                 │
 │   Playback Engine (useAlgoPlayer hook)                          │
-│        │                                                       │
-│        │  Simply plays back the trace                         │
-│        │  like a video                                         │
-│        ▼                                                       │
-│   ┌─────────────┐                                              │
-│   │   UI State  │  React renders current step                 │
-│   └─────────────┘                                              │
-│                                                                  │
+│        │                                                        │
+│        │  Simply plays back the trace                           │
+│        │  like a video                                          │
+│        ▼                                                        │
+│   ┌─────────────┐                                               │
+│   │   UI State  │  React renders current step                   │
+│   └─────────────┘                                               │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -251,10 +255,11 @@ trace.push({
 This project helps students understand:
 
 1. **Algorithm Fundamentals**: How basic sorting and search algorithms work
-2. **Time Complexity**: Visual difference between O(n²), O(n log n), and O(log n)
+2. **Time Complexity**: Visual difference between O(n²), O(n log n), O(log n), O(VE), and O(V³)
 3. **Data Structure Traversal**: How BFS/DFS explore graphs differently
-4. **Shortest Path**: How Dijkstra's finds optimal paths in weighted graphs
-5. **Visual Debugging**: Step through algorithms to understand each operation
+4. **Shortest Path**: How Dijkstra's, Bellman-Ford, and Floyd-Warshall find optimal paths in weighted graphs
+5. **Minimum Spanning Tree**: How Prim's and Kruskal's algorithms build optimal spanning trees
+6. **Visual Debugging**: Step through algorithms to understand each operation
 
 ---
 
@@ -292,5 +297,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ---
 
 <p align="center">
-  Made with ❤️ for engineering students everywhere
+  Built for Engineering Students
 </p>
