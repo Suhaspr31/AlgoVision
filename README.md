@@ -11,6 +11,7 @@
   An interactive algorithm visualizer for engineering students to understand algorithms step-by-step through beautiful animations.
 </p>
 
+[![AlgoVision Preview](https://raw.githubusercontent.com/Suhaspr31/My-Portfolio/main/public/algovision-preview.png)](https://algovision-red.vercel.app/)
 ---
 
 ## ✨ Features
